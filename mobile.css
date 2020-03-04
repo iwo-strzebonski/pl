@@ -1,0 +1,65 @@
+@media (max-width: 980px) {
+    .content {
+        grid-template-columns: 1fr 90% 1fr;
+    }
+    .information {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 60px;
+        grid-template-areas: "photo" "characteristic" "download";
+    }
+    .header {
+        grid-template-columns: 1fr 60px;
+        grid-template-areas: "main menu";
+    }
+    .menu {
+        grid-area: menu;
+        cursor: pointer;
+        background-color: #111111;
+        color: #82817F;
+        transition: 0.3s;
+    }
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: #111111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+    .sidenav a {
+        display: block;
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        color: #82817F;
+        transition: 0.3s;
+    }
+    .sidenav a:hover {
+        background-color: inherit;
+        color: #EDECE9;
+    }
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        left: 0px;
+        font-size: 36px;
+    }
+    .lang {
+        display: none;
+    }
+    .contact {
+        display: none;
+    }
+    .hobbies {
+        display: none;
+    }
+    .certificates {
+        display: none;
+    }
+    .education {
+        display: none;
+    }
+}

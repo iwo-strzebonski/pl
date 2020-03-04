@@ -1,0 +1,41 @@
+@media (min-width: 980px) {
+    .content {
+        grid-template-columns: 1fr 960px 1fr;
+    }
+    .information {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 60px;
+        grid-template-areas: "photo characteristic" "download download";
+    }
+    .header {
+        grid-template-columns: 180px 1fr auto auto auto auto 60px;
+        grid-template-areas: "main . education certificates hobbies contact lang";
+        background-color: #EDECE9;
+    }
+    .menu {
+        display: none;
+    }
+    .sidenav {
+        display: none;
+    }
+    .contact, .hobbies, .certificates, .education {
+        padding-left: 4px;
+        padding-right: 4px;
+        background-color: #82817F;
+    }
+    .lang {
+        grid-area: lang;
+    }
+    .contact {
+        grid-area: contact;
+    }
+    .hobbies {
+        grid-area: hobbies;
+    }
+    .certificates {
+        grid-area: certificates;
+    }
+    .education {
+        grid-area: education;
+    }
+}

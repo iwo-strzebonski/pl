@@ -15,9 +15,7 @@ body {
 
 .header {
     display: grid;
-    grid-template-columns: 1fr 60px;
     grid-template-rows: 1fr;
-    grid-template-areas: "main menu";
     grid-area: header;
     line-height: 60px;
 }
@@ -26,6 +24,7 @@ span {
     display: inline-block;
     vertical-align: middle;
     line-height: normal;
+    color: #363534;
 }
 
 a {
@@ -36,6 +35,11 @@ a {
 .main:hover,
 .menu:hover,
 .download:hover,
+.lang:hover,
+.contact:hover,
+.hobbies:hover,
+.certificates:hover,
+.education:hover,
 a:hover {
     background-color: #EDECE9;
     transition: 0.3s;
@@ -46,47 +50,6 @@ a:hover {
     background-color: #82817F;
     color: #363534;
     transition: 0.3s;
-}
-
-.menu {
-    grid-area: menu;
-    cursor: pointer;
-    background-color: #111111;
-    color: #82817F;
-    transition: 0.3s;
-}
-
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    background-color: #111111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.sidenav a {
-    display: block;
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    color: #82817F;
-    transition: 0.3s;
-}
-
-.sidenav a:hover {
-    background-color: inherit;
-    color: #EDECE9;
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    left: 0px;
-    font-size: 36px;
 }
 
 @media screen and (max-height: 450px) {
@@ -100,7 +63,7 @@ a:hover {
 
 .content {
     display: grid;
-    height: 68.2vh;
+    height: 70vh;
     grid-template-rows: 3fr 1fr;
     grid-template-areas: ". information ." ". depiction .";
     grid-area: content;
@@ -110,28 +73,6 @@ a:hover {
 .information {
     display: grid;
     grid-area: information;
-}
-
-@media (min-width: 980px) {
-    .content {
-        grid-template-columns: 1fr 960px 1fr;
-    }
-    .information {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 60px;
-        grid-template-areas: "photo characteristic" "download download";
-    }
-}
-
-@media (max-width: 980px) {
-    .content {
-        grid-template-columns: 1fr 90% 1fr;
-    }
-    .information {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 60px;
-        grid-template-areas: "photo" "characteristic" "download";
-    }
 }
 
 .photo {
