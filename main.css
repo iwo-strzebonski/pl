@@ -113,6 +113,8 @@ a:hover {
 .small-footer {
     grid-area: small-footer;
     background-color: #363534;
-    color: #82817F;
     line-height: 60px;
+    span {
+        color: #82817F;
+    }
 }
