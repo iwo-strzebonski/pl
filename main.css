@@ -4,12 +4,14 @@ body {
     margin: 0;
     text-align: center;
     font-size: 25px;
+    user-select: none;
 }
 
 .grid-container {
     display: grid;
+    height: 100vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 60px auto 240px;
+    grid-template-rows: 60px auto 60px;
     grid-template-areas: "header" "content" "footer";
 }
 
@@ -18,18 +20,21 @@ body {
     grid-template-rows: 1fr;
     grid-area: header;
     line-height: 60px;
+    background-color: #303030;
 }
 
 span {
     display: inline-block;
     vertical-align: middle;
     line-height: normal;
-    color: #363534;
+    color: #E0E0E0;
+    transition: 0.3s;
 }
 
 a {
+    display: block;
     text-decoration: none;
-    color: #82817F;
+    transition: 0.3s;
 }
 
 .main:hover,
@@ -39,35 +44,30 @@ a {
 .contact:hover,
 .hobbies:hover,
 .certificates:hover,
-.education:hover,
-a:hover {
-    background-color: #EDECE9;
+.education:hover {
+    background-color: #606060;
+    transition: 0.3s;
+}
+
+.main,
+.contact,
+.hobbies,
+.certificates,
+.education {
+    background-color: inherit;
     transition: 0.3s;
 }
 
 .main {
     grid-area: main;
-    background-color: #82817F;
-    color: #363534;
-    transition: 0.3s;
-}
-
-@media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 15px;
-    }
-    .sidenav a {
-        font-size: 18px;
-    }
 }
 
 .content {
     display: grid;
-    height: 70vh;
-    grid-template-rows: 3fr 1fr;
-    grid-template-areas: ". information ." ". depiction .";
+    grid-template-rows: 1fr;
+    grid-template-areas: ". information .";
     grid-area: content;
-    background-color: #363534;
+    background-color: #101010;
 }
 
 .information {
@@ -76,46 +76,38 @@ a:hover {
 }
 
 .photo {
-    grid-area: photo;
-    background-color: #C2C1BE;
+    grid-area: left;
+    background-color: #404040;
+}
+
+.side {
+    grid-area: left;
+    background-color: #404040;
 }
 
 .characteristic {
     grid-area: characteristic;
-    background-color: #FAF9F5;
+    background-color: #E0E0E0;
 }
 
 .download {
     grid-area: download;
     line-height: 60px;
     transition: 0.3s;
-    background-color: #111111;
-}
-
-.depiction {
-    grid-area: depiction;
-    background-color: #FAF9F5;
+    background-color: #202020;
 }
 
 .footer {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 180px 60px;
-    grid-template-areas: "big-footer" "small-footer";
     grid-area: footer;
-}
-
-.big-footer {
-    grid-area: big-footer;
-    background-color: #C2C1BE;
-}
-
-.small-footer {
-    grid-area: small-footer;
-    background-color: #363534;
     line-height: 60px;
+    background-color: #303030;
+}
+
+.selected {
+    cursor: context-menu;
+    background-color: #606060;
 }
 
 #copy {
-    color: #82817F;
+    color: #808080;
 }

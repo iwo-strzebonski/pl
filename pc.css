@@ -1,16 +1,25 @@
 @media (min-width: 980px) {
+    .photo img {
+        padding: 8px;
+    }
+    a {
+        padding: 0 4px;
+        height: 60px;
+    }
+    .lang a {
+        padding: 0;
+    }
     .content {
         grid-template-columns: 1fr 960px 1fr;
     }
     .information {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: auto 1fr;
         grid-template-rows: 1fr 60px;
-        grid-template-areas: "photo characteristic" "download download";
+        grid-template-areas: "left characteristic" "download download";
     }
     .header {
         grid-template-columns: 180px 1fr auto auto auto auto 60px;
         grid-template-areas: "main . education certificates hobbies contact lang";
-        background-color: #EDECE9;
     }
     .menu {
         display: none;
@@ -18,13 +27,9 @@
     .sidenav {
         display: none;
     }
-    .contact, .hobbies, .certificates, .education {
-        padding-left: 4px;
-        padding-right: 4px;
-        background-color: #82817F;
-    }
     .lang {
         grid-area: lang;
+        line-height: normal;
     }
     .contact {
         grid-area: contact;
@@ -37,5 +42,19 @@
     }
     .education {
         grid-area: education;
+    }
+    .side {
+        position: relative;
+        width: 64px;
+    }
+    .rotate {
+        transform-origin: 0 0;
+        transform: rotate(90deg);
+        font-size: 72px;
+        text-transform: uppercase;
+        line-height: 0;
+        position: absolute;
+        top: 8px;
+        left: 32px;
     }
 }
