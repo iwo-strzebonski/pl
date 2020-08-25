@@ -74,6 +74,11 @@
     }
 }
 
+@media (max-width: 760px) {
+	.rotate {
+        display: none;
+    }
+}
 
 /* @media screen and (max-height: 450px) {
     .sidenav {
